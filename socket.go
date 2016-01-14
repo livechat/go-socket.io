@@ -137,6 +137,11 @@ func (s *socket) loop() error {
 		if err := decoder.Decode(&p); err != nil {
 			return err
 		}
+		if p.Type == _DISCONNECT {
+			// deferred function will send disconnection event.
+			// exit early to prevent double event
+			return nil
+		}
 		ret, err := s.socketHandler.onPacket(decoder, &p)
 		if err != nil {
 			return err
@@ -160,8 +165,6 @@ func (s *socket) loop() error {
 					return err
 				}
 			}
-		case _DISCONNECT:
-			return nil
 		}
 	}
 }
