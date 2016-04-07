@@ -1,6 +1,6 @@
 # socket.io
 
-[![GoDoc](http://godoc.org/github.com/googollee/go-socket.io?status.svg)](http://godoc.org/github.com/googollee/go-socket.io) [![Build Status](https://travis-ci.org/googollee/go-socket.io.svg)](https://travis-ci.org/googollee/go-socket.io)
+[![GoDoc](http://godoc.org/github.com/nkovacs/go-socket.io?status.svg)](http://godoc.org/github.com/nkovacs/go-socket.io) [![Build Status](https://travis-ci.org/nkovacs/go-socket.io.svg)](https://travis-ci.org/nkovacs/go-socket.io)
 
 go-socket.io is an implementation of [socket.io](http://socket.io) in golang, which is a realtime application framework.
 
@@ -13,13 +13,13 @@ It is compatible with latest implementation of socket.io in node.js, and support
 Install the package with:
 
 ```bash
-go get github.com/googollee/go-socket.io
+go get github.com/nkovacs/go-socket.io
 ```
 
 Import it with:
 
 ```go
-import "github.com/googollee/go-socket.io"
+import "github.com/nkovacs/go-socket.io"
 ```
 
 and use `socketio` as the package name inside the code.
@@ -35,7 +35,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/googollee/go-socket.io"
+	"github.com/nkovacs/go-socket.io"
 )
 
 func main() {
