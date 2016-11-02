@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/nkovacs/go-engine.io"
+	"livechat/go-engine.io"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

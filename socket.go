@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/nkovacs/go-engine.io"
+	"livechat/go-engine.io"
 )
 
 // Socket is the socket object of socket.io.
