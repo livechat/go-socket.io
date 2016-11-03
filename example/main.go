@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/nkovacs/go-socket.io"
+	"github.com/livechat/go-socket.io"
 )
 
 func main() {

@@ -5,7 +5,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"livechat/go-engine.io"
+	"github.com/livechat/go-engine.io"
 )
 
 type WriterNopCloser struct {

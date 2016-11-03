@@ -9,7 +9,7 @@ import (
 	"io/ioutil"
 	"strconv"
 
-	"livechat/go-engine.io"
+	"github.com/livechat/go-engine.io"
 )
 
 const Protocol = 4

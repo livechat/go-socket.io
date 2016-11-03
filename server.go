@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"livechat/go-engine.io"
+	"github.com/livechat/go-engine.io"
 )
 
 // Server is the server of socket.io.
