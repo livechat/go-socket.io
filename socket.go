@@ -33,6 +33,9 @@ type Socket interface {
 
 	// BroadcastTo broadcasts an event to the room with given args.
 	BroadcastTo(room, event string, args ...interface{}) error
+
+	// Close socket
+	Close() error
 }
 
 type socket struct {
@@ -167,4 +170,8 @@ func (s *socket) loop() error {
 			}
 		}
 	}
+}
+
+func (s *socket) Close() error {
+	return s.conn.Close()
 }
