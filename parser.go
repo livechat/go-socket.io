@@ -7,9 +7,10 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"math"
 	"strconv"
 
-	"github.com/livechat/go-engine.io"
+	engineio "github.com/livechat/go-engine.io"
 )
 
 const Protocol = 4
@@ -205,6 +206,9 @@ func (d *decoder) Decode(v *packet) error {
 		if err != nil {
 			return fmt.Errorf("invalid packet")
 		}
+		if n > math.MaxInt || n < math.MinInt {
+			return fmt.Errorf("invalid packet")
+		}
 		v.attachNumber = int(n)
 	}
 
@@ -261,6 +265,9 @@ func (d *decoder) Decode(v *packet) error {
 		id, err := strconv.ParseInt(id.String(), 10, 64)
 		if err != nil {
 			return err
+		}
+		if id > math.MaxInt || id < math.MinInt {
+			return fmt.Errorf("invalid packet")
 		}
 		v.Id = int(id)
 	}
